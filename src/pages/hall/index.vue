@@ -175,10 +175,8 @@
 			})
 		},
 		onLoad(e) {
-
-		},
-		mounted() {
-			this.getCoach()
+      // 使用页面内uniapp的生命周期，不适用vue的生命周期
+      this.getCoach()
 		},
 		methods: {
 			getCoach() {
