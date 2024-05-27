@@ -1,0 +1,235 @@
+.lesson {
+    width: 690rpx;
+    height: 288rpx;
+    background-color: #fff;
+    margin: 20rpx auto 0;
+    position: relative;
+    border-radius: 12rpx;
+    box-shadow: 0 3rpx 16rpx 0 rgba(210, 210, 210, 0.13);
+    padding-left: 187rpx;
+}
+
+.lesson .name {
+    font-size: 30rpx;
+}
+.lesson .share-btn {
+    width: 110rpx;
+    height: 66rpx;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+}
+.lesson .share {
+    width: 110rpx;
+    height: 66rpx;
+    display: block;
+}
+.lesson .time {
+    //width: 253rpx;
+    //height: 66rpx;
+    border-radius: 12px 0 12px 0;
+    //padding-top: 15rpx;
+    overflow-wrap: break-word;
+    text-align: left;
+    padding: 15rpx 0 0 30rpx;
+    font-size: 32rpx;
+    color: $winhouse-main-color;
+    background-color: $winhouse-main-color-1;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    width: 236rpx;
+    height: 56rpx;
+}
+
+.lesson .live-info {
+    position: absolute;
+    right: 24rpx;
+    top: 109rpx;
+    z-index: 1;
+    font-size: 24rpx;
+    color: #999999;
+    display: flex;
+    align-items: center;
+}
+
+.live-info.live {
+    color: #000;
+}
+
+.live-info .live-icon {
+    width: 15rpx;
+    height: 15rpx;
+    border-radius: 50%;
+    background-color: #ff3232;
+    margin-right: 10rpx;
+}
+
+.lesson:active {
+    background-color: #f0f0f0;
+}
+
+.lesson .title {
+    padding-top: 96rpx;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20rpx;
+}
+
+.lesson .point {
+    width: 7rpx;
+    height: 7rpx;
+    display: block;
+    border-radius: 50%;
+    margin: 0 10rpx;
+    background-color: var(--main-color);
+}
+
+.lesson .current,
+.lesson .total {
+    font-size: 24rpx;
+}
+
+.lesson .current {
+    color: var(--main-color);
+}
+
+.lesson-bac {
+    width: 253rpx;
+    height: 66rpx;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.lesson .row {
+    font-size: 24rpx;
+    padding-bottom: 15rpx;
+    width: 300rpx;
+    line-height: 1.2;
+    color: #222;
+    display: block;
+}
+
+.lesson .avatar {
+    position: absolute;
+    left: 30rpx;
+    top: 96rpx;
+    z-index: 1;
+    width: 132rpx;
+    height: 132rpx;
+    border-radius: 50%;
+}
+
+.lesson .label {
+    color: #999;
+}
+
+.lesson .btn-sign-in {
+    position: absolute;
+    right: 30rpx;
+    bottom: 30rpx;
+    z-index: 1;
+    background-color: $winhouse-main-color;
+    border-radius: 30rpx;
+    width: 150rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 24rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty::after {
+    content: '今日无课程，看看其他日期吧~';
+    position: absolute;
+    display: block;
+    width: 342rpx;
+    font-size: 24rpx;
+    color: #666;
+    text-align: center;
+    bottom: -74rpx;
+    left: -50rpx;
+}
+
+.empty {
+    width: 242rpx;
+    height: 199rpx;
+    display: block;
+    margin: 300rpx auto;
+    overflow: visible;
+    position: relative;
+}
+
+.btn-sign-in.cancel {
+    border: 2rpx solid $winhouse-main-color;
+    background-color: rgba(255, 255, 255, 1);
+    color: $winhouse-main-color;
+}
+
+.btn-sign-in.inactive {
+    background-color: #e8e8e8;
+}
+
+.right-block .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top .customer {
+    font-size: 28rpx;
+    color: #0d1836;
+}
+
+.top .date {
+    color: 999px;
+    font-size: 24rpx;
+}
+
+.stars {
+    display: flex;
+    padding-top: 14rpx;
+}
+
+.stars .star {
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 10rpx;
+}
+
+.labels {
+    padding-top: 40rpx;
+    display: flex;
+}
+
+.labels .label {
+    padding: 13rpx 21rpx;
+    color: #666666;
+    font-size: 20rpx;
+    background-color: #f4f4f4;
+    border-radius: 24rpx;
+    margin-right: 15rpx;
+}
+
+.right-block .name {
+    color: #999;
+    font-size: 24rpx;
+    padding-top: 50rpx;
+}
+
+.live-icon {
+    width: 21rpx;
+    height: 24rpx;
+    display: block;
+}

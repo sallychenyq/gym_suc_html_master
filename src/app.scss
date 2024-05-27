@@ -1,0 +1,200 @@
+/**app.wxss**/
+.background-main{
+    background: $winhouse-main-color;
+}
+.border-radius50{
+    border-radius: 50%;
+}
+:root{
+    height: 100%;
+    box-sizing: border-box;
+    text-rendering: optimizeSpeed;
+    --main-color: $winhouse-main-color;
+    --title-color: #303030;
+    --subtitle-color: #555555;
+    --light-white-color: #f6f6f6;
+    --light-gray-color: #f2f2f2;
+    --orange-color: #ff7800;
+    background: #fafafa;
+}
+Page {
+    height: 100%;
+    box-sizing: border-box;
+    text-rendering: optimizeSpeed;
+    --main-color: #ff7e00;
+    --title-color: #303030;
+    --subtitle-color: #555555;
+    --light-white-color: #f6f6f6;
+    --light-gray-color: #f2f2f2;
+    --orange-color: #ff7800;
+    background: #fafafa;
+    /* -webkit-font-smoothing: antialiased; */
+}
+
+.container {
+    box-sizing: border-box;
+    /* background-color: #fafafa; */
+    //min-height: 100vh;
+}
+
+view,
+image.scroll-view,
+textarea,
+scroll-view,
+button {
+    box-sizing: border-box;
+    line-height: 1;
+    color: var(--title-color);
+    font-family: PingFangSC-Regular, SourceHanSansCN, tahoma, arial, 'Hiragino Sans GB', sans-serif;
+}
+
+.fake-line {
+    background-color: #fafafa;
+    height: 20rpx;
+    width: 100%;
+}
+
+.text-overflow-hidden-l1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0 !important;
+}
+
+button::after {
+    border: 0;
+}
+
+.fake-img {
+    background-color: #ccc;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pfr {
+    font-family: PingFangSC-Regular, SourceHanSansCN-Medium, tahoma, arial, 'Hiragino Sans GB', sans-serif !important;
+}
+
+.pfm {
+    font-family: PingFangSC-Medium, SourceHanSansCN-Medium, tahoma, arial, 'Hiragino Sans GB', sans-serif !important;
+}
+
+.pfb {
+    font-family: PingFangSC-Semibold, SourceHanSansCN, tahoma, arial, 'Hiragino Sans GB', sans-serif !important;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 36rpx;
+    box-shadow: 0 3rpx 16rpx 0 rgba(210, 210, 210, 0.13);
+}
+
+.normal-btn {
+    width: 650rpx;
+    height: 96rpx;
+    border-radius: 12rpx;
+    line-height: 96rpx;
+    text-align: center;
+    color: #fff;
+    background-color: $winhouse-main-color;
+}
+
+.normal-btn.inactive {
+    background-color: #fafafa;
+}
+
+.touch:active {
+    opacity: 0.7;
+}
+
+.separater {
+    height: 1rpx;
+    width: 100%;
+    background-color: #efefef;
+}
+
+.page-container {
+    height: 100%;
+}
+
+.universal-avatar {
+    border-radius: 50%;
+    display: block;
+}
+
+.universal-active:active {
+    background-color: #f4f4f4;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.inputer.arrow::after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    right: 22rpx;
+    top: calc(50% - 7rpx);
+    z-index: 99;
+    border-top: 15rpx solid #989889;
+    border-left: 13rpx solid transparent;
+    border-right: 13rpx solid transparent;
+    border-bottom: none;
+}
+
+.transparent-effact {
+    background-color: transparent !important;
+    //color: transparent !important;
+    border-bottom: none !important;
+    position: absolute !important;
+}
+
+.inputer.meter::after {
+    content: '㎡';
+    color: #464646;
+    font-size: 32rpx;
+    display: block;
+    position: absolute;
+    right: 22rpx;
+    top: calc(50% - 35rpx);
+    z-index: 99;
+}
+
+checkbox .wx-checkbox-input {
+    width: 36rpx;
+    height: 36rpx;
+    border-radius: 50%;
+    border-color: var(--main-color);
+    vertical-align: middle;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: var(--main-color);
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    width: 30rpx;
+    height: 30rpx;
+    line-height: 28rpx;
+    text-align: center;
+    font-size: 22rpx;
+    color: #ffffff;
+    background: transparent;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+}

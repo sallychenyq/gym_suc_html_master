@@ -1,0 +1,48 @@
+.container {
+    background-color: #fafafa;
+    padding-top: 20rpx;
+}
+
+.logs {
+    width: 690rpx;
+    margin: 0 auto;
+    padding: 10rpx 40rpx;
+    overflow-y: scroll;
+}
+
+.log {
+    position: relative;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+.log:last-child {
+    border-bottom: 0;
+}
+
+.top,
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top {
+    font-size: 28rpx;
+    color: #222;
+    padding-top: 40rpx;
+}
+
+.bottom {
+    font-size: 24rpx;
+    color: #999;
+    padding-top: 20rpx;
+    padding-bottom: 40rpx;
+}
+
+.num {
+    color: #ff7e00;
+    font-size: 28rpx;
+    position: absolute;
+    top: 62rpx;
+    right: 0;
+    z-index: 1;
+}

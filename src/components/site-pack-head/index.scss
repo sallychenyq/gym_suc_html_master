@@ -1,0 +1,61 @@
+/* components/coach1v1-head/index.wxss */
+.site-pack-head {
+    width: 690rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 0 auto 20rpx;
+    padding: 50rpx 0 40rpx 187rpx;
+    position: relative;
+}
+
+.site-pack-head .avatar {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 40rpx;
+    left: 30rpx;
+    z-index: 1;
+}
+
+.site-pack-head .title {
+    font-size: 30rpx;
+    color: #000;
+    margin-bottom: 20rpx;
+}
+
+.site-pack-head .row {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15rpx;
+    font-size: 24rpx;
+}
+
+.row .label {
+    color: #999;
+}
+
+.row .value {
+    color: #111;
+    display: flex;
+    flex-direction: column;
+}
+.row .value .item {
+    margin-bottom: 9rpx;
+}
+
+.site-pack-head .btn {
+    width: 150rpx;
+    height: 60rpx;
+    font-size: 24rpx;
+    line-height: 60rpx;
+    text-align: center;
+    background-color: $winhouse-main-color;
+    color: #fff;
+    border-radius: 30rpx;
+    position: absolute;
+    right: 30rpx;
+    bottom: 40rpx;
+    z-index: 1;
+}

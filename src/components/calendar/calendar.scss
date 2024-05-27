@@ -1,0 +1,61 @@
+
+.calendar {
+    width: 100%;
+    height: 164rpx;
+    padding-top: 30rpx;
+    position: relative;
+    background-color: #fff;
+    overflow-x: scroll;
+}
+
+.calendar::-webkit-scrollbar {
+    display: none;
+}
+
+.calendar .weeks {
+    white-space: nowrap;
+    background-color: #fff;
+}
+
+.calendar .week {
+    display: inline-block;
+    width: 108rpx;
+    font-size: 24rpx;
+    text-align: center;
+    color: #afafaf;
+}
+
+.calendar .week.active {
+    color: $winhouse-main-color;
+}
+
+.dates-container {
+    position: relative;
+}
+
+.calendar .dates.active {
+    background-color: $winhouse-main-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.calendar .dates.active .date {
+    color: #fff;
+}
+
+.calendar .dates {
+    white-space: nowrap;
+    font-size: 28rpx;
+    transition: clip-path 0.3s;
+}
+
+.calendar .date {
+    display: inline-block;
+    width: 108rpx;
+    text-align: center;
+    padding-top: 34rpx;
+    padding-bottom: 40rpx;
+}

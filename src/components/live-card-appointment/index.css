@@ -1,0 +1,160 @@
+.lesson {
+    width: 690rpx;
+    height: 314rpx;
+    background-color: #fff;
+    margin: 20rpx auto 0;
+    position: relative;
+    border-radius: 12rpx;
+    box-shadow: 0 3rpx 16rpx 0 rgba(210, 210, 210, 0.13);
+    padding-left: 40rpx;
+}
+
+.lesson .name {
+    font-size: 30rpx;
+}
+
+.lesson .time {
+    width: 377rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    text-align: center;
+    font-size: 24rpx;
+    background-color: #fafafa;
+    color: var(--main-color);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 30rpx;
+    z-index: 2;
+    border-top-right-radius: 22rpx;
+    border-bottom-right-radius: 22rpx;
+}
+
+.lesson:active {
+    background-color: #f0f0f0;
+}
+
+.lesson .title {
+    font-size: 30rpx;
+    padding-top: 96rpx;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20rpx;
+}
+
+.lesson .point {
+    width: 7rpx;
+    height: 7rpx;
+    display: block;
+    border-radius: 50%;
+    margin: 0 10rpx;
+    background-color: var(--main-color);
+}
+
+.lesson .current,
+.lesson .total {
+    font-size: 24rpx;
+}
+
+.lesson .current {
+    color: var(--main-color);
+}
+
+.lesson .row {
+    font-size: 24rpx;
+    width: 550rpx;
+    line-height: 1.2;
+    color: #222;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15rpx;
+}
+
+.lesson .avatar {
+    position: absolute;
+    right: 40rpx;
+    top: 40rpx;
+    z-index: 1;
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+}
+
+.lesson .label {
+    color: #999;
+}
+
+.lesson .btn-sign-in {
+    position: absolute;
+    right: 30rpx;
+    bottom: 30rpx;
+    z-index: 1;
+    background-color: var(--main-color);
+    border-radius: 30rpx;
+    width: 150rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 24rpx;
+}
+
+.btn-sign-in.evaluate {
+    border: 1rpx solid #b4b4b4;
+    color: #b4b4b4;
+    background-color: #fff;
+}
+
+.btn-sign-in.cancel {
+    background-color: #fff;
+    border: 2rpx solid var(--main-color);
+    color: var(--main-color);
+}
+
+.btn-sign-in.inactive {
+    background-color: #e8e8e8;
+}
+
+.empty-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-appoint {
+    background-color: var(--main-color);
+    width: 180rpx;
+    height: 60rpx;
+    color: #fff;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 24rpx;
+    border-radius: 30rpx;
+    margin-top: 80rpx;
+}
+
+.empty-page .tips {
+    font-size: 24rpx;
+    color: #666666;
+    margin-top: 50rpx;
+}
+
+.empty {
+    width: 242rpx;
+    height: 179rpx;
+    display: block;
+    margin-top: 500rpx;
+}
+
+.lesson .type-label {
+    padding: 15rpx 20rpx;
+    border-radius: 8rpx;
+    border: 1rpx solid rgba(102, 112, 134, 0.6);
+    background-color: rgba(237, 242, 255, 0.6);
+    color: #667086;
+    font-size: 22rpx;
+    position: absolute;
+    bottom: 30rpx;
+    left: 40rpx;
+    z-index: 2;
+}

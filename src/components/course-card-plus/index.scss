@@ -1,0 +1,268 @@
+.card {
+  box-shadow: 0px 3px 16px 0px rgba(210, 210, 210, 0.13);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  height: 288rpx;
+  width: 690rpx;
+  //margin: auto;
+  margin: 30rpx auto 0 auto;
+  .clique-must {
+    height: 0rpx;
+    width: 100%;
+
+    padding: 0 40rpx 0 30rpx;
+
+    .text {
+      margin-top: 30rpx;
+      width: 100%;
+      overflow-wrap: break-word;
+      color: #353b4d;
+      font-size: 22rpx;
+      font-family: PingFangSC-Semibold;
+      text-align: right;
+      white-space: nowrap;
+      line-height: 32rpx;
+      display: block;
+    }
+  }
+  .time-bg {
+    width: 236rpx;
+    height: 56rpx;
+
+    .time-bg-tag {
+      background-color: $winhouse-main-color-1;
+      //border-radius: 0px 20px 0px 12px;
+      border-radius: 12px 0 12px 0;
+      height: 56rpx;
+      width: 236rpx;
+      padding: 15rpx 0 0 30rpx;
+
+      .time {
+        width: 176rpx;
+        overflow-wrap: break-word;
+        color: $winhouse-main-color;
+        font-size: 32rpx;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 32rpx;
+        display: block;
+      }
+    }
+
+
+    .disable {
+      background-color: rgba(200, 200, 200, 1);
+
+      .time {
+        color: #FFF;
+      }
+    }
+  }
+
+  .course-main-box {
+    width: 630rpx;
+    height: 152rpx;
+    margin: 40rpx 0 40rpx 30rpx;
+
+    .avatar-box {
+      background-color: rgba(237, 242, 255, 1);
+      border-radius: 50%;
+      height: 132rpx;
+      width: 132rpx;
+
+      .avatar {
+        width: 132rpx;
+        height: 132rpx;
+      }
+    }
+
+    .course-box {
+      width: 239rpx;
+      height: 150rpx;
+      margin-left: 25rpx;
+
+      .course-info1 {
+        //width: 141rpx;
+        height: 29rpx;
+
+        .course-name {
+          //width: 84rpx;
+          height: 29rpx;
+          overflow-wrap: break-word;
+          color: rgba(0, 0, 0, 1);
+          font-size: 29rpx;
+          text-align: justifyLeft;
+          white-space: nowrap;
+          line-height: 29rpx;
+          display: block;
+        }
+
+        .record-box-title {
+          background-color: rgba(153, 153, 153, 1);
+          border-radius: 50%;
+          width: 6rpx;
+          height: 6rpx;
+          margin: 13rpx 15rpx 0 15rpx;
+          //margin-top: 10rpx;
+        }
+
+        .course-count {
+          //width: 32rpx;
+          height: 23rpx;
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 23rpx;
+          text-align: justifyLeft;
+          white-space: nowrap;
+          line-height: 29rpx;
+          //margin-top: 1rpx auto auto 5rpx;
+          margin-top: 1rpx;
+          display: block;
+
+          .appoint-count {
+            color: $winhouse-main-color;
+          }
+
+          .disable {
+            color: rgba(153, 153, 153, 1);
+            background-color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+
+      .course-coach {
+        width: 112rpx;
+        height: 23rpx;
+        overflow-wrap: break-word;
+        font-size: 0;
+        text-align: justifyLeft;
+        white-space: nowrap;
+        line-height: 23rpx;
+        margin: 20rpx 0 0 1rpx;
+
+        .coach-name-label {
+          width: 112rpx;
+          height: 23rpx;
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 23rpx;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 23rpx;
+        }
+
+        .coach-name {
+          width: 112rpx;
+          height: 23rpx;
+          overflow-wrap: break-word;
+          //color: rgba(153, 153, 153, 1);
+          font-size: 23rpx;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 23rpx;
+        }
+      }
+
+      .course-site {
+        width: 239rpx;
+        height: 23rpx;
+        overflow-wrap: break-word;
+        font-size: 0;
+        text-align: justifyLeft;
+        white-space: nowrap;
+        line-height: 23rpx;
+        margin-top: 17rpx;
+
+        .course-site-label {
+          width: 239rpx;
+          height: 23rpx;
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 23rpx;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 23rpx;
+        }
+
+        .course-site-name {
+          width: 239rpx;
+          height: 23rpx;
+          overflow-wrap: break-word;
+          //color: rgba(153, 153, 153, 1);
+          font-size: 23rpx;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 23rpx;
+        }
+      }
+
+      .course-pay-mode {
+        width: 116rpx;
+        height: 23rpx;
+        overflow-wrap: break-word;
+        font-size: 0;
+        text-align: justifyLeft;
+        white-space: nowrap;
+        line-height: 23rpx;
+        margin-top: 15rpx;
+
+        .course-pay-mode-label {
+          width: 116rpx;
+          height: 23rpx;
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 23rpx;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 23rpx;
+        }
+
+        .course-pay-mode-view {
+          width: 116rpx;
+          height: 23rpx;
+          overflow-wrap: break-word;
+          //color: rgba(153, 153, 153, 1);
+          font-size: 23rpx;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 23rpx;
+        }
+      }
+    }
+
+    .appoint-button {
+      background-color: $winhouse-main-color;
+      border-radius: 30px;
+      height: 60rpx;
+      width: 150rpx;
+      margin: 92rpx 0 0 84rpx;
+      padding-top: 19rpx;
+      text-align: center;
+      //padding: 19rpx 0 0 41rpx;
+
+      .appoint-button-view {
+        width: 150rpx;
+        height: 23rpx;
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 24rpx;
+        //text-align: justifyLeft;
+        white-space: nowrap;
+        line-height: 24rpx;
+        display: block;
+      }
+    }
+
+    .disable {
+      background-color: rgba(232, 232, 232, 1);
+    }
+
+    .appointed {
+      border: 2rpx solid $winhouse-main-color;
+      background-color: rgba(255, 255, 255, 1);
+      .appoint-button-view {
+        color: $winhouse-main-color;
+      }
+    }
+  }
+}

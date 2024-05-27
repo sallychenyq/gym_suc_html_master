@@ -1,0 +1,260 @@
+//分割非纯字符串
+var notPureStringSplit = function (text) {
+    var patternLabel = getRegExp("<[^>]*>", "ig")
+    var patternCloseLabel = getRegExp("</.*?>", "ig")
+
+    if (patternLabel.test(text)) {
+        return text.replace(patternCloseLabel, "\n").replace(patternLabel, "").split("\n")
+    }
+    return text.split('\\n')
+}
+var transVideoDuration = function (durationInSec) {
+    var min = parseInt(durationInSec / 60)
+    var sec = durationInSec % 60
+    return (min < 10 ? '0' + min : min) + ':' + (sec < 10 ? '0' + sec : sec)
+}
+//角色id转化为字符串
+var roleId2String = function (roleId) {
+    switch (roleId) {
+        case 0:
+            return '业主'
+        case 1:
+            return '设计师'
+        case 2:
+            return '工长'
+        case 3:
+            return '客服'
+    }
+}
+//时间戳转化为日期
+var dateFormat = function (time, format) {
+    var t = getDate(time)
+    var reg = getRegExp("yyyy|MM|dd|HH|mm|ss", "g")
+    var tf = function (i) {
+        return (i < 10 ? '0' : '') + i
+    }
+    return format.replace(reg, function (a) {
+        switch (a) {
+            case 'yyyy':
+                return tf(t.getFullYear())
+            case 'MM':
+                return tf(t.getMonth() + 1)
+            case 'mm':
+                return tf(t.getMinutes())
+            case 'dd':
+                return tf(t.getDate())
+            case 'HH':
+                return tf(t.getHours())
+            case 'ss':
+                return tf(t.getSeconds())
+        }
+    })
+}
+var dateFormatFromObject=function (date, format) {
+    format=format || 'yyyy-MM-dd'
+    return dateFormat(date.getTime(),format)
+}
+var timeStame2dayInChinese = function (val) {
+
+    switch (getDate(val).getDay()) {
+        case 0:
+            return '日'
+        case 1:
+            return '一'
+        case 2:
+            return '二'
+        case 3:
+            return '三'
+        case 4:
+            return '四'
+        case 5:
+            return '五'
+        case 6:
+            return '六'
+    }
+}
+
+//时间戳转化为中文描述
+//exp:123123213=>"1分钟前"
+var timeStamp2Chinese = function (val) {
+    var D = getDate()
+    var target = getDate(val).getTime()
+    var surplus = D.getTime() - target
+
+    var day = Math.floor(surplus / 1000 / 60 / 60 / 24)
+    surplus -= day * 24 * 60 * 60 * 1000
+    var hour = Math.floor(surplus / 1000 / 60 / 60)
+    surplus -= hour * 60 * 60 * 1000
+    var min = Math.floor(surplus / 1000 / 60)
+    surplus -= min * 60 * 1000
+    var sec = Math.floor(surplus / 1000)
+
+    if (day > 30) {
+        return dateFormat(val, 'yyyy-MM-dd HH:mm')
+    }
+    if (day > 0) {
+        return day + '天前'
+    }
+    if (hour > 0) {
+        return hour + '小时前'
+    }
+    if (min > 0) {
+        return min + '分钟前'
+    }
+    if (sec > 0) {
+        return sec + '秒前'
+    }
+    return '刚才'
+}
+
+//剩余时间计算
+var timeLeftCalc = function (startTime, endTime) {
+
+    if (!endTime) {
+        throw new Error('missing param')
+    }
+    if (!startTime) {
+        var startTime = getDate().getTime()
+    }
+    var surplus = parseInt(endTime) - parseInt(startTime)
+
+    if (surplus <= 0) {
+        return {
+            day: 0,
+            hour: 0,
+            min: 0,
+            sec: 0
+        }
+    }
+
+    var day = Math.floor(surplus / 1000 / 60 / 60 / 24)
+    surplus -= day * 24 * 60 * 60 * 1000
+    var hour = Math.floor(surplus / 1000 / 60 / 60)
+    surplus -= hour * 60 * 60 * 1000
+    var min = Math.floor(surplus / 1000 / 60)
+    surplus -= min * 60 * 1000
+    var sec = Math.floor(surplus / 1000)
+
+    return {
+        day: day,
+        hour: hour,
+        min: min,
+        sec: sec
+    }
+}
+var resizeAliOssImage = function (url, opt) {
+    if (url.indexOf('?x-oss-process=image') > -1) {
+        return url
+    }
+    if (!opt) {
+        return url
+    }
+    url += '?x-oss-process=image/resize' + (opt.w ? ',w_' + opt.w : '') + (opt.h ? ',h_' + opt.h : '')
+    return url
+}
+
+//反序列化JSON
+var jsonParse = function (JSONString) {
+    return JSON.parse(JSONString)
+}
+
+var transEvaluateStruct = function (item) {
+
+    var parsedJson = JSON.parse(item.extradata)
+    if (!parsedJson) {
+        return
+    }
+    var result = {}
+    result.assessItem = parsedJson
+    result.assessItem.appraiseCount = item.appraiseCount
+    result.assessItem.commentCount = item.commentCount
+    result.assessItem.id = parsedJson.dataId
+    result.targetUser = parsedJson.targetUser
+
+    return result
+}
+
+//求助状态转译为字符串
+var helpStateTrans = function (extradata) {
+
+    var jspnExt = JSON.parse(extradata)
+    if (jspnExt.acceptStatus === 0) {
+        return '已采纳答案'
+    }
+    if (jspnExt.aidStatus === -1) {
+        return '悬赏已过期'
+    }
+
+    var timeLeft = timeLeftCalc(null, jspnExt.endTime)
+
+    return '悬赏结束日期' + timeLeft.day + '天' + timeLeft.hour + '时' + timeLeft.min + '分'
+}
+var score2fixed = function (num, length) {
+    if (!length) {
+        length = 1
+    }
+    return num.toFixed(length)
+}
+var calcImgHeight = function (width, height, targetWidth) {
+    return height / width * targetWidth
+}
+var isAlive = function (start, end) {
+    var s = getDate(start).getTime()
+    var e = getDate(end).getTime()
+    var now = getDate().getTime()
+    if (now < s) {
+        return 0
+    }
+    if (now >= s && now <= e) {
+        return 1
+    }
+    return 2
+}
+
+var minuteDiff = function (start) {
+    var s = getDate(start).getTime()
+    var now = getDate().getTime()
+    return Math.ceil((s - now) / 1000 / 60)
+}
+var coachScheduleExpire = function (endStr) {
+    var iosDateTrans = getRegExp("-", "g")
+    var now = getDate()
+    var end = endStr.replace(iosDateTrans, "/")
+    end = getDate(end)
+    return now.getTime() > end.getTime()
+}
+var myAppointExpire = function (endStr) {
+    var iosDateTrans = getRegExp("-", "g")
+    var now = getDate()
+    var end = endStr.replace(iosDateTrans, "/")
+    end = getDate(end)
+    return now.getTime() > end.getTime()+7*24*60*60*1000
+}
+var touchMove = function (e) {
+    console.log(e.instance)
+}
+var joinAry = function (a) {
+    return a? a.join("，"): ""
+}
+module.exports = {
+    touchMove: touchMove,
+    calcImgHeight: calcImgHeight,
+    coachScheduleExpire: coachScheduleExpire,
+    resizeAliOssImage: resizeAliOssImage,
+    score2fixed: score2fixed,
+    notPureStringSplit: notPureStringSplit,
+    transVideoDuration: transVideoDuration,
+    timeLeftCalc: timeLeftCalc,
+    timeStamp2Chinese: timeStamp2Chinese,
+    helpStateTrans: helpStateTrans,
+    dateFormat: dateFormat,
+    dateFormatFromObject: dateFormatFromObject,
+    transEvaluateStruct: transEvaluateStruct,
+    jsonParse: jsonParse,
+    isAlive: isAlive,
+    roleId2String: roleId2String,
+    timeStame2dayInChinese: timeStame2dayInChinese,
+    minuteDiff: minuteDiff,
+    myAppointExpire: myAppointExpire,
+    joinAry: joinAry
+}

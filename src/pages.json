@@ -1,0 +1,47 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
+		"^l-(.*)": "@/l-components/l-$1/index.vue",
+		"autoscan": true,
+		"custom": {
+			"autoscan": true,
+			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
+			"^l-(.*)": "@/l-components/l-$1/index.vue"
+		}
+	},
+	"preloadRule": {},
+	"subPackages": [],
+	"pages": [{
+		"path": "pages/hall/index",
+		"style": {
+			"navigationStyle": "custom"
+			// "disableScroll": true
+		}
+	}, {
+		"path": "pages/sites/index",
+		"style": {
+			"navigationStyle": "custom"
+			// "disableScroll": true
+		}
+	}],
+	"tabBar": {
+		"custom": false,
+		"color": "#7A7E83",
+		"selectedColor": "#000000",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/hall/index"
+			},
+			{
+				"pagePath": "pages/sites/index"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "健身中心",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

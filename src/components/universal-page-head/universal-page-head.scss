@@ -1,0 +1,69 @@
+/* components/universal-page-head/universal-page-head.wxss */
+.universal-page-head {
+    color: #0d1836;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 36rpx;
+    //background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 199;
+    transition: background-color 0.3s;
+    contain: content;
+    pointer-events: none;
+}
+
+.btn-back-container.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-back-container {
+    height: 80rpx;
+    width: 70rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-back {
+    width: 19rpx;
+    height: 33rpx;
+    display: block;
+    pointer-events: all;
+}
+
+
+.btn-qr-container.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-qr-container {
+    margin-left: 20rpx;
+    border: #ededee solid 2rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 500ms;
+    background-color: #fff;
+}
+.tips{
+    background-color: $winhouse-main-color;
+}
+
+.btn-qr {
+    //width: 60rpx;
+    //height: 60rpx;
+    display: block;
+    pointer-events: all;
+}
+
+.holder {
+    width: 78rpx;
+}
