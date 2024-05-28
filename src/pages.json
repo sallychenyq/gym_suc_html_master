@@ -18,7 +18,25 @@
 			// "disableScroll": true
 		}
 	}, {
+		"path": "pages/hall/all",
+		"style": {
+			"navigationStyle": "custom"
+			// "disableScroll": true
+		}
+	}, {
 		"path": "pages/sites/index",
+		"style": {
+			"navigationStyle": "custom"
+			// "disableScroll": true
+		}
+	}, {
+		"path": "pages/reserve/index",
+		"style": {
+			"navigationStyle": "custom"
+			// "disableScroll": true
+		}
+	}, {
+		"path": "pages/my/index",
 		"style": {
 			"navigationStyle": "custom"
 			// "disableScroll": true
@@ -27,7 +45,7 @@
 	"tabBar": {
 		"custom": false,
 		"color": "#7A7E83",
-		"selectedColor": "#000000",
+		"selectedColor": "#6BD0FF",
 		"borderStyle": "white",
 		"backgroundColor": "#ffffff",
 		"list": [{
@@ -35,6 +53,12 @@
 			},
 			{
 				"pagePath": "pages/sites/index"
+			},
+			{
+				"pagePath": "pages/reserve/index"
+			},
+			{
+				"pagePath": "pages/my/index"
 			}
 		]
 	},
@@ -44,4 +68,5 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}
+
 }

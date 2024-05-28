@@ -212,6 +212,8 @@ export const pageIsTabBar = function() {
 	const tabBarPage = [
 		'/pages/hall/index',
 		'/pages/sites/index',
+		'/pages/reserve/reserve',
+		'/pages/my/my',
 	]
 	return tabBarPage.indexOf(thisPage) >= 0
 }
@@ -509,7 +511,7 @@ export const getCoachData = (option) => new Promise((resolve, reject) => {
 	}
 	login().then((res) => {
 			//#ifdef MP-WEIXIN
-			return NIJ.getcoach({
+			return NIJ.getCoachInfo({
 				code: res.code
 			});
 			//#endif
@@ -606,7 +608,7 @@ export const setPxRpxExchangeRate = function(app) {
 }; //保留n位小数
 
 export const roundFun = (value, n) => Math.round(value * Math.pow(10, n)) / Math.pow(10,
-n); // export const handleSceneString = function (scene) {
+	n); // export const handleSceneString = function (scene) {
 
 function mixinHandle(source) {
 	if (!source || !source.mixins) {
