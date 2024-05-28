@@ -119,7 +119,12 @@
 				this.$refs.page.switchRouter('hall')
 			})
 		},
+		onLoad(e) {
 
+		},
+		mounted() {
+			this.getCoach()
+		},
 		methods: {
 			getCoach() {
 				this.$api.getCoach().then(res => {
@@ -151,3 +156,9 @@
 <style lang="scss">
 	@import './index.scss';
 </style>
+
+
+<!-- <style>
+	@import './common.css';
+	@import './index.rpx.css';
+</style> -->

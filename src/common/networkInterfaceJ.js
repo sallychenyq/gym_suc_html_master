@@ -228,8 +228,7 @@ export const getCorpManConfig = huihomeInterFace('get', '/man/get', {
 
 export const getStaffName = huihomeInterFace('get', '/user/getStaffName');
 export const getShortNameName = huihomeInterFace('get', '/user/getShortName');
-// api路径统一不加front，命名注意大小写
-export const getCoach = huihomeInterFace('get', '/superCoach/typeList?cc=1002');
+export const getcoach = huihomeInterFace('get', '/front/superCoach/typeList?cc=1002');
 /**
  * 个人相关
  */
