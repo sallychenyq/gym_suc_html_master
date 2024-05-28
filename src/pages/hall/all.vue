@@ -90,6 +90,10 @@
 
 <script>
 	export default {
+
+		mounted() {
+			this.getCoach()
+		},
 		methods: {
 			getCoach() {
 				this.$api.getCoach().then(res => {

@@ -156,9 +156,3 @@
 <style lang="scss">
 	@import './index.scss';
 </style>
-
-
-<!-- <style>
-	@import './common.css';
-	@import './index.rpx.css';
-</style> -->
