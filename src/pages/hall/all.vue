@@ -89,9 +89,13 @@
 </template>
 
 <script>
+	import PageMain from "../../components/page-main/page-main.vue";
 	export default {
+		components: {
+			PageMain,
 
-		mounted() {
+		},
+		onLoad(e) {
 			this.getCoach()
 		},
 		methods: {
@@ -105,6 +109,6 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	@import './all.scss';
 </style>

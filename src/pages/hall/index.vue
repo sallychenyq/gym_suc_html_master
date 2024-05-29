@@ -16,10 +16,10 @@
 							</view>
 							<text class="text_8">{课时均价}</text>
 						</view>
-						<u-line class="group_4 flex-col"></u-line>
+						<!-- <u-line class="group_4 flex-col"></u-line> -->
 						<view class="group_5 flex-col ">
 							<view class="box_9 flex-row ">
-								<text class="text_9">吴磊 {网球教练}</text>
+								<text class="text_9">{{coachlist[0].coachNickName}} {网球教练}</text>
 								<image class="label_2" referrerpolicy="no-referrer"
 									src="../../static/static/男-icon.png" />
 							</view>
@@ -111,7 +111,7 @@
 					{
 						lanhuimage0: '../../static/static/alterr.png',
 					},
-				],
+				]
 			}
 		},
 		onShow: function() {
@@ -120,21 +120,15 @@
 			})
 		},
 		onLoad(e) {
-
-		},
-		mounted() {
+			// 使用页面内uniapp的生命周期，不适用vue的生命周期
 			this.getCoach()
 		},
+
 		methods: {
 			getCoach() {
 				this.$api.getCoach().then(res => {
 					console.log(res.data);
 					this.coachlist = res.data;
-				})
-			},
-			goto(url) {
-				uni.navigateTo({
-					url: url
 				})
 			},
 			tabsClick(item) {
