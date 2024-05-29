@@ -228,7 +228,7 @@ export const getCorpManConfig = huihomeInterFace('get', '/man/get', {
 
 export const getStaffName = huihomeInterFace('get', '/user/getStaffName');
 export const getShortNameName = huihomeInterFace('get', '/user/getShortName');
-export const getcoach = huihomeInterFace('get', '/front/superCoach/typeList?cc=1002');
+export const getCoach = huihomeInterFace('get', 'superCoach/typeList?cc=1002');
 /**
  * 个人相关
  */
