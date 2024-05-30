@@ -1,11 +1,11 @@
 .page {
 	position: relative;
 	width: 750rpx;
-	height: 1460rpx;
+	height: 1340rpx;
 	overflow: hidden;
 
 	.section_5 {
-		height: 1140rpx;
+		height: 1200rpx;
 		/*1220*/
 		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
 
@@ -16,8 +16,8 @@
 		border-radius: 15px;
 		.group_2 {
 			width: 690rpx;
-			height: 1140rpx;
-			background-image: url(../../static/static/教练.jpg);
+			height: 1200rpx;
+			//background-image: url("item");
 			background-position: center;
 			background-size: auto 100%;
 			flex-direction: column;
@@ -28,9 +28,9 @@
 			.box_8 {
 				width: 600rpx;
 				height: 78rpx;
-				margin: 708rpx 0 0 30rpx;
+				margin: 768rpx 0 0 30rpx;
 				position: absolute;
-				bottom: auto;
+				bottom: 370rpx;
 				.group_3 {
 					width: 150rpx;
 					height: 75rpx;
@@ -87,7 +87,7 @@
 					width: 1rpx;
 					height: 70rpx;
 					margin: 5rpx 0 0 10rpx;
-					direction: col;
+
 					background-color: rgba(255, 255, 255, 1);
 				}
 				.group_5 {
@@ -113,7 +113,7 @@
 						.label_2 {
 							width: 30rpx;
 							height: 30rpx;
-							margin: 5rpx 0 0 30rpx;
+							margin: 5rpx 0 0 50rpx;
 						}
 					}
 					.text-wrapper_3 {
@@ -145,9 +145,9 @@
 			.image-text_1 {
 				width: 606rpx;
 				height: 123rpx;
-				margin: 795rpx 0 0 30rpx;
+				margin: 855rpx 0 0 30rpx;
 				position: absolute;
-				bottom: auto;
+				bottom: 230rpx;
 				.block_1 {
 					position: relative;
 					width: 132rpx;
@@ -157,10 +157,7 @@
 					background: linear-gradient(rgba(0, 217, 217, 0.5), rgba(107, 208, 255, 0.5));
 					/* opacity: 0.4; */
 					border-radius: 10rpx;
-					.image-text_2 {
-						width: 119rpx;
-						height: 28rpx;
-						margin: 5rpx 0 0 12rpx;
+
 						.text-group_1 {
 							width: 96rpx;
 							height: 28rpx;
@@ -178,30 +175,8 @@
 							height: 17rpx;
 							margin-top: 7rpx;
 						}
-					}
-					.image-text_3 {
-						position: absolute;
-						left: 12rpx;
-						top: 5rpx;
-						width: 119rpx;
-						height: 28rpx;
-						.text-group_1 {
-							width: 96rpx;
-							height: 28rpx;
-							overflow-wrap: break-word;
-							color: rgba(255, 255, 255, 1);
-							font-size: 24rpx;
-							font-family: Source Han Sans-Medium;
-							font-weight: 500;
-							text-align: left;
-							white-space: nowrap;
-							line-height: 28rpx;
-						}
-						.thumbnail_1 {
-							width: 17rpx;
-							height: 17rpx;
-						}
-					}
+
+
 				}
 				.text-group_2 {
 					width: 666rpx;
@@ -252,7 +227,7 @@
 				position: absolute;
 				bottom: 0;
 				.image-wrapper_2 {
-					width: 572rpx;
+					width: 657rpx;
 					height: 170rpx;
 					margin-top: 22rpx;
 					justify-content: space-between;
@@ -263,10 +238,6 @@
 						border: 2rpx solid #ffffff;
 						border-radius: 25rpx;
 					}
-				}
-				.image_4 {
-					width: 65rpx;
-					height: 192rpx;
 				}
 			}
 		}

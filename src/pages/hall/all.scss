@@ -1,20 +1,21 @@
 .page {
 	position: relative;
 	width: 750rpx;
-	height: 2463rpx;
+	height: 100%;
 	overflow: hidden;
 
 	.group_8 {
-		position: relative;
+		position: absolute;
+		top: auto;
 		width: 750rpx;
 		height: 389rpx;
 		.block_3 {
 			width: 796rpx;
-			height: 220rpx;
+			height: 100%;
 			margin: 36rpx 0 0 30rpx;
 			.group_9 {
 				background-color: rgba(255, 255, 255, 0);
-				height: 210rpx;
+				height: 245rpx;
 				width: 129rpx;
 				position: relative;
 				.image_3 {
@@ -23,25 +24,51 @@
 					top: 2rpx;
 					height: 210rpx;
 					width: 129rpx;
-				}
+				}.text_8 {
+					 width: 44rpx;
+					 height: 26rpx;
+					 overflow-wrap: break-word;
+					 color: rgba(68, 68, 68, 1);
+					 font-size: 22rpx;
+					 font-family: Source Han Sans-Regular;
+					 font-weight: normal;
+					 text-align: center;
+					 white-space: nowrap;
+					 line-height: 22rpx;
+					 margin: 225rpx 0 0 50rpx;
+				 }
 			}
 			.group_12 {
 				background-color: rgba(255, 255, 255, 0);
-				height: 210rpx;
+				height: 245rpx;
 				width: 129rpx;
 				position: relative;
-				margin: 10rpx 0 0 58rpx;
+				margin-left:58rpx;
 				.image_4 {
 					position: absolute;
 					left: 2rpx;
-					top: 2rpx;
+
 					height: 210rpx;
 					width: 129rpx;
-				}
+				}.text_9 {
+					 background-image: linear-gradient(to left, #6bd0ff, #00d9d9);
+					 width: 44rpx;
+					 height: 26rpx;
+					 overflow-wrap: break-word;
+					 font-size: 22rpx;
+					 font-family: Source Han Sans-Medium;
+					 font-weight: 500;
+					 text-align: center;
+					 white-space: nowrap;
+					 line-height: 22rpx;
+					 margin: 225rpx 0 0 40rpx;
+					 -webkit-background-clip: text;
+					 -webkit-text-fill-color: transparent;
+				 }
 			}
 			.block_5 {
 				background-color: rgba(255, 255, 255, 0);
-				height: 210rpx;
+				height: 245rpx;
 				width: 129rpx;
 				position: absolute;
 				left: 404rpx;
@@ -52,11 +79,23 @@
 					top: 3rpx;
 					height: 210rpx;
 					width: 129rpx;
-				}
+				}.text_10 {
+					 width: 69rpx;
+					 height: 26rpx;
+					 overflow-wrap: break-word;
+					 color: rgba(68, 68, 68, 1);
+					 font-size: 22rpx;
+					 font-family: Source Han Sans-Regular;
+					 font-weight: normal;
+					 text-align: center;
+					 white-space: nowrap;
+					 line-height: 22rpx;
+					 margin: 225rpx 0 0 35rpx;
+				 }
 			}
 			.group_14 {
 				background-color: rgba(255, 255, 255, 0);
-				height: 210rpx;
+				height: 245rpx;
 				margin-left: 219rpx;
 				width: 129rpx;
 				position: relative;
@@ -66,68 +105,19 @@
 					top: 2rpx;
 					height: 210rpx;
 					width: 129rpx;
-				}
-			}
-		}
-		.text-wrapper_2 {
-			width: 605rpx;
-			height: 26rpx;
-			margin: 25rpx 0 0 72rpx;
-			.text_8 {
-				width: 44rpx;
-				height: 26rpx;
-				overflow-wrap: break-word;
-				color: rgba(68, 68, 68, 1);
-				font-size: 22rpx;
-				font-family: Source Han Sans-Regular;
-				font-weight: normal;
-				text-align: center;
-				white-space: nowrap;
-				line-height: 22rpx;
-			}
-
-			.text_9 {
-				background-image: linear-gradient(90deg, rgba(107, 208, 255, 1) 0, rgba(0, 217, 217, 1) 100%);
-				width: 44rpx;
-				height: 26rpx;
-				overflow-wrap: break-word;
-				font-size: 22rpx;
-				font-family: Source Han Sans-Medium;
-				font-weight: 500;
-				text-align: center;
-				white-space: nowrap;
-				line-height: 22rpx;
-				margin-left: 143rpx;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
-
-			.text_10 {
-				width: 69rpx;
-				height: 26rpx;
-				overflow-wrap: break-word;
-				color: rgba(68, 68, 68, 1);
-				font-size: 22rpx;
-				font-family: Source Han Sans-Regular;
-				font-weight: normal;
-				text-align: center;
-				white-space: nowrap;
-				line-height: 22rpx;
-				margin-left: 131rpx;
-			}
-
-			.text_11 {
-				width: 44rpx;
-				height: 26rpx;
-				overflow-wrap: break-word;
-				color: rgba(68, 68, 68, 1);
-				font-size: 22rpx;
-				font-family: Source Han Sans-Regular;
-				font-weight: normal;
-				text-align: left;
-				white-space: nowrap;
-				line-height: 22rpx;
-				margin-left: 130rpx;
+				}.text_11 {
+					 width: 44rpx;
+					 height: 26rpx;
+					 overflow-wrap: break-word;
+					 color: rgba(68, 68, 68, 1);
+					 font-size: 22rpx;
+					 font-family: Source Han Sans-Regular;
+					 font-weight: normal;
+					 text-align: left;
+					 white-space: nowrap;
+					 line-height: 22rpx;
+					 margin: 225rpx 0 0 60rpx;
+				 }
 			}
 		}
 	}
@@ -135,9 +125,9 @@
 		position: relative;
 		width: 690rpx;
 		height: 793rpx;
-		background: lightgrey;
+		background: #FDFDFD ;
 		background-size: 100% 100%;
-		margin: -1rpx 0 0 30rpx;
+		margin: 0 0 0 30rpx;
 		border-radius: 20px;
 		.block_6 {
 			background-color: rgba(216, 216, 216, 1);
@@ -151,6 +141,7 @@
 				.image_8 {
 					width: 690rpx;
 					height: 389rpx;
+					//border-radius: 20px;
 				}
 			}
 		}
@@ -263,17 +254,7 @@
 				line-height: 36rpx;
 			}
 		}
-		.block_8 {
-			height: 10rpx;
-			background: lightgray;
-			background-size: 100% 100%;
-			width: 630rpx;
-			margin: 39rpx 0 0 30rpx;
-			.block_9 {
-				width: 491rpx;
-				height: 10rpx;
-			}
-		}
+
 		.block_10 {
 			width: 630rpx;
 			height: 76rpx;
@@ -292,7 +273,7 @@
 						overflow-wrap: break-word;
 						color: rgba(0, 0, 0, 1);
 						font-size: 28rpx;
-						font-family: D-DIN-Regular;
+						font-family: D-DIN;
 						font-weight: normal;
 						text-align: center;
 						white-space: nowrap;
@@ -306,8 +287,8 @@
 						overflow-wrap: break-word;
 						color: rgba(0, 0, 0, 1);
 						font-size: 48rpx;
-						font-family: D-DIN-Bold;
-						font-weight: 700;
+						font-family: D-DIN;
+						font-weight: bolder;
 						text-align: center;
 						white-space: nowrap;
 						line-height: 28rpx;
@@ -342,6 +323,7 @@
 				background-size: 100% 100%;
 				margin-left: 122rpx;
 				width: 190rpx;
+				border-radius: 25px;
 				.text_28 {
 					width: 112rpx;
 					height: 28rpx;
@@ -362,6 +344,7 @@
 				background-size: 100% 100%;
 				margin-left: 20rpx;
 				width: 190rpx;
+				border-radius: 25px;
 				.text_29 {
 					width: 112rpx;
 					height: 28rpx;
@@ -385,19 +368,5 @@
 			height: 34rpx;
 		}
 	}
-	.group_16 {
-		position: relative;
-		width: 690rpx;
-		height: 793rpx;
-		background: lightgray;
-		background-size: 100% 100%;
-		margin: 30rpx 0 0 30rpx;
-		.label_5 {
-			position: absolute;
-			left: 505rpx;
-			top: 598rpx;
-			width: 32rpx;
-			height: 34rpx;
-		}
-	}
+
 }
