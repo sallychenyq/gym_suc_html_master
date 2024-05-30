@@ -12,7 +12,6 @@
         @change="tabsChange"
       ></u-tabs
     ></u-sticky>
-
     <view class="page flex-col" v-if="tabsCurrent === 0">
       <!--view class="group_1 flex-col"-->
       <!--scroll-view :indicator="false" scroll-y width="1200rpx"-->
