@@ -29,7 +29,6 @@
               class="group_2"
               style="background-image: 'url(' + item.avatar + ')'"
             -->
-
                 <view class="box_8 flex-row">
                   <view class="group_3 flex-col">
                     <view class="text-wrapper_2 flex-row">
@@ -82,9 +81,11 @@
                     <u-read-more class="text-group_2 flex-row"
                       ><text class="text_17">
                         这里写一些推荐甄选教练的理由，但是文字不能这么少，还要再写一点才能让页面看着比例协调nsjvdiufnvdifnvijdnvndfvvvvvvvvvvvvvvvvffvakjndfjvndkfjnckjdfvkjfdvkjmd
-                      </text>
-                      <text class="text_18">查看更多</text></u-read-more
+                      </text></u-read-more
                     >
+                    <button class="text_18" @click="detail(index)">
+                      查看更多
+                    </button>
                   </view>
                 </view>
                 <view class="box_10 flex-row">
@@ -189,11 +190,13 @@ export default {
         this.coachlist = res.data;
       });
     },
+    detail(index) {
+      uni.navigateTo({ url: "/pages/hall/detail?index=" + index });
+    },
     age(birth) {},
     tabsClick(item) {
       console.log("item", item);
     },
-
     /**
      * @Event 方法
      * @description: u-tabs 菜单change

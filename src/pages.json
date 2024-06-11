@@ -23,7 +23,14 @@
 			"navigationStyle": "custom"
 			// "disableScroll": true
 		}
-	}, {
+	},{
+		"path": "pages/hall/detail",
+		"style": {
+
+
+		}
+	},
+		{
 		"path": "pages/sites/index",
 		"style": {
 			"navigationStyle": "custom"
@@ -64,7 +71,7 @@
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "健身中心",
+//		"navigationBarTitleText": "健身中心",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}
