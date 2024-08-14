@@ -41,7 +41,7 @@
 		</view>
 </template>
 <!-- #ifdef APP-VUE || MP-WEIXIN || H5 || MP-QQ -->
-<script src="./index.wxs" module="wxs" lang="wxs"></script>
+<script src="index.wxs" module="wxs" lang="wxs"></script>
 <!-- #endif -->
 <script>
 	import touch from '../../libs/mixin/touch.js'
@@ -142,7 +142,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "../../libs/css/components.scss";
+	@import "../../libs/css/components";
 
 	.u-swipe-action-item {
 		position: relative;

@@ -250,6 +250,10 @@ export const coachType = huihomeInterFace(
   "get",
   "superCoach/coachIlks?cc=1002"
 );
+export const getCoachInfo = huihomeInterFace(
+  "get",
+  "superCoach/getCoachInfo?cid=504&cc=1002"
+);
 /**
  * 个人相关
  */
@@ -297,9 +301,9 @@ export const cancelAppoint = huihomeInterFace(
     loading: "正在取消预约",
   }
 );
-export const getCoachInfo = huihomeInterFace("get", "/coach/info", {
-  loading: "正在获取信息",
-});
+// export const getCoachInfo = huihomeInterFace("get", "/coach/info", {
+//   loading: "正在获取信息",
+// });
 export const getGoodAtInfo = huihomeInterFace("get", "/coach/goodAtInfo");
 export const getCourseOne = huihomeInterFace("get", "/course/getOne");
 export const getLiveOne = huihomeInterFace("get", "/course/getLive");

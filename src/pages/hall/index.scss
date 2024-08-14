@@ -1,9 +1,9 @@
-.page {
-	position: relative;
-	width: 750rpx;
-	height: 1340rpx;
-	overflow: hidden;
-
+	.tab{
+		flex-direction: row;
+		.text{
+			margin-left: 20rpx;
+		}
+	}
 	.section_5 {
 		height: 1200rpx;
 		/*1220*/
@@ -246,15 +246,16 @@
 		width: 750rpx;
 		height: 137rpx;
 		.group_6 {
-			width: 690rpx;
+			width: 360rpx;
 			height: 96rpx;
 			margin: 30rpx 0 0 30rpx;
 			.text-wrapper_4 {
 				height: 96rpx;
-				background: #f2f4f8 100% no-repeat;
+				background: #FFFFFF 100% no-repeat;
 				background-size: 100% 100%;
-				width: 330rpx;
+				width: 180rpx;
 				border-radius: 25px;
+				border: #DEDEDE solid 1rpx;
 				.text_19 {
 					width: 112rpx;
 					height: 28rpx;
@@ -273,7 +274,7 @@
 				height: 96rpx;
 				background: linear-gradient(to left, #6bd0ff, #00d9d9) 100% no-repeat;
 				background-size: 100% 100%;
-				width: 330rpx;
+				width: 180rpx;
 				border-radius: 25px;
 				.text_20 {
 					width: 112rpx;
@@ -291,4 +292,4 @@
 			}
 		}
 	}
-}
+

@@ -1,68 +1,64 @@
 <template>
   <view class="page flex-col">
     <view class="group_8 flex-col">
-      <u-scroll-list
-        ><view class="block_3 flex-row">
+      <u-scroll-list><view class="block_3 flex-row">
           <button class="group_9 flex-col">
             <image
               class="image_3"
               referrerpolicy="no-referrer"
-              src="../../static/static/健身-icon.png"
-            /><text class="text_8">健身</text>
+              src="/static/static/健身-icon.png"/><text class="text_8">健身</text>
           </button>
           <button class="group_12 flex-col">
             <image
               class="image_4"
               referrerpolicy="no-referrer"
-              :src="type[0].largeImgActive"
-            /><text class="text_9">{{ type[0].superCoachTypeName }}</text>
+              :src="type.largeImgActive"/>
+	          <text class="text_9">{{ type.superCoachTypeName }}</text>
           </button>
           <button class="block_5 flex-col">
             <image
               class="image_7"
               referrerpolicy="no-referrer"
-              src="../../static/static/高尔夫-icon.png"
-            /><text class="text_10">高尔夫</text>
+              src="/static/static/高尔夫-icon.png"/><text class="text_10">高尔夫</text>
           </button>
           <button class="group_14 flex-col">
             <image
               class="image_5"
               referrerpolicy="no-referrer"
-              src="../../static/static/国术-icon.png"
-            /><text class="text_11">国术</text>
+              src="/static/static/国术-icon.png"/><text class="text_11">国术</text>
           </button>
         </view>
       </u-scroll-list>
-      <!-- <view class="image-wrapper_2 flex-row">
-		</view> -->
     </view>
     <scroll-view
       :indicator="false"
       scroll-y
-      style="position: relative; top: 355rpx"
-      ><view
+      class="scroll">
+	    <view
         class="group_15 flex-col"
         v-for="(item, index) in coachlist"
         :key="index"
-      >
+        @click="godetail(index)">
         <view class="block_6 flex-col">
           <view class="image-wrapper_3 flex-col">
             <image
               class="image_8"
               referrerpolicy="no-referrer"
-              src="../../static/static/教练.jpg"
-            />
+              :src="item.avatar"/>
           </view>
         </view>
         <view class="block_7 flex-row justify-between">
           <view class="text-group_1 flex-col justify-between">
             <text class="text_14">{{ item.coachNickName }}{网球教练}</text>
             <view class="text-wrapper_3">
-              <UniTag
+              <u-tag
                 v-if="item.resume.birthday"
                 size="mini"
-                :text="item.resume.birthday.slice(2, 4) + '年'"
-              ></UniTag>
+                :text=_Birthday()
+                bg-color="#FFF8E8"
+                border-color="#FFF8E8"
+                color="#A87E4E"
+                class="tag"></u-tag>
               <text class="text_16">・</text>
               <text class="text_15">{{ item.resume.height }}cm</text>
               <text class="text_16">・</text>
@@ -75,12 +71,9 @@
             <image
               class="label_2"
               referrerpolicy="no-referrer"
-              :src="
-                item.gender == 1
-                  ? '../../static/static/男-icon.png'
-                  : '../../static/static/女-icon.png'
-              "
-            />
+              :src="item.gender == 1
+                  ? '/static/static/男-icon.png'
+                  : '/static/static/女-icon.png'"/>
           </view>
         </view>
         <view class="text-wrapper_4">
@@ -93,8 +86,7 @@
           :percentage="82"
           :showText="false"
           height="4"
-          activeColor="#6bd0ff"
-        ></u-line-progress>
+          activeColor="#6bd0ff"></u-line-progress>
         <view class="block_10 flex-row">
           <view class="block_11 flex-col justify-between">
             <view class="text-wrapper_5 flex-row justify-between">
@@ -106,8 +98,7 @@
               <image
                 class="thumbnail_1"
                 referrerpolicy="no-referrer"
-                src="../../static/static/问好.png"
-              />
+                src="/static/static/问好.png"/>
             </view>
           </view>
           <button class="text-wrapper_6 flex-col">
@@ -120,31 +111,19 @@
         <image
           class="label_3"
           referrerpolicy="no-referrer"
-          src="../../static/static/头像.png"
-        /> </view
-    ></scroll-view>
+          src="/static/static/头像.png"/>
+	    </view>
+    </scroll-view>
   </view>
 </template>
 
 <script>
 // import PageMain from "../../components/page-main/page-main.vue";
-
-// import uni-tag from "@/components/uni-tag/uni-tag.vue";
-
-import UniTag from "@/components/uni-tag/uni-tag.vue";
-import UButton from "@/uview-ui/components/u-button/u-button.vue";
-
 export default {
   components: {
-    UButton,
-    UniTag,
-
     // PageMain,
   },
-  // onLoad(e) {
-  mounted() {
-    this.getCoach();
-    this.getType();
+  onLoad(e) {
   },
   data() {
     return {
@@ -152,24 +131,31 @@ export default {
       type: [],
     };
   },
-  // onShow: function () {
-  //   this.$nextTick(() => {
-  //     this.$refs.page.switchRouter("hall");
-  //   });
-  // },
   methods: {
-    getCoach() {
-      this.$api.getCoach().then((res) => {
-        console.log(res.data);
-        this.coachlist = res.data;
-      });
+	  init(){
+		  this.$api.coachType().then((res) => {
+			  console.log(res.data[0]);
+			  this.type = res.data[0];
+		  });
+			this.$api.getCoachInfo().then((res) => {
+			  console.log(res.data);
+			  this.coachlist[0] = res.data;
+		  });
+	  },
+    godetail(index) {
+      uni.navigateTo({ url: "/module1/pages/detail?index=" + index });
     },
-    getType() {
-      this.$api.coachType().then((res) => {
-        console.log(res.data);
-        this.type = res.data;
-      });
-    },
+	  _Birthday() {
+		  if (!this.infoList.resume) {
+			  return null;
+		  }
+		  if (!this.infoList.resume.birthday) {
+			  return null;
+		  }
+		  // 1999-01-01,拆分99年
+		  let year = this.infoList.resume.birthday.split("-")[0].slice(2);
+		  return year + "年";
+	  },
   },
 };
 </script>

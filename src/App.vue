@@ -78,4 +78,8 @@ export default {
   font-family: D-DIN;
   src: url("~@/static/static/DIN-Regular-2.otf");
 }
+@font-face {
+  font-family: AliPHT3-55Regular;
+  src: url("~@/static/static/AlibabaPuHuiTi-3-55-Regular.otf");
+}
 </style>

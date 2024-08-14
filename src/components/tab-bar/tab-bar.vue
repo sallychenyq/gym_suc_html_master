@@ -14,25 +14,25 @@
 				list: [{
 						name: 'hall',
 						pagePath: "/pages/hall/index",
-						text: "甄选私教",
+						text: "私教",
 						iconPath: "/static/static/甄选私教.png",
 						selectedIconPath: "/static/static/甄选私教-当前.png",
 						enable: true
 					},
 					{
-						name: 'sites',
-						pagePath: "/pages/sites/index",
-						text: "训练场地",
-						iconPath: "/static/static/训练场地.png",
-						selectedIconPath: "/static/static/训练场地-当前.png",
+						name: 'appoint',
+						pagePath: "/pages/reserve/index",
+						text: "预约",
+						iconPath: "/static/static/约课.png",
+						selectedIconPath: "/static/static/约课-当前.png",
 						enable: true
 					},
 					{
-						name: 'appoint',
-						pagePath: "/pages/reserve/index",
-						text: "预约训练",
-						iconPath: "/static/static/约课.png",
-						selectedIconPath: "/static/static/约课-当前.png",
+						name: 'sites',
+						pagePath: "/pages/sites/index",
+						text: "签课",
+						iconPath: "/static/static/训练场地.png",
+						selectedIconPath: "/static/static/训练场地-当前.png",
 						enable: true
 					},
 					{

@@ -1,79 +1,88 @@
 {
-	"easycom": {
-		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
-		"^l-(.*)": "@/l-components/l-$1/index.vue",
-		"autoscan": true,
-		"custom": {
-			"autoscan": true,
-			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
-			"^l-(.*)": "@/l-components/l-$1/index.vue"
-		}
-	},
-	"preloadRule": {},
-	"subPackages": [],
-	"pages": [{
-		"path": "pages/hall/index",
-		"style": {
-			"navigationStyle": "custom"
-			// "disableScroll": true
-		}
-	}, {
-		"path": "pages/hall/all",
-		"style": {
-			"navigationStyle": "custom"
-			// "disableScroll": true
-		}
-	},{
-		"path": "pages/hall/detail",
-		"style": {
-
-
-		}
-	},
-		{
-		"path": "pages/sites/index",
-		"style": {
-			"navigationStyle": "custom"
-			// "disableScroll": true
-		}
-	}, {
-		"path": "pages/reserve/index",
-		"style": {
-			"navigationStyle": "custom"
-			// "disableScroll": true
-		}
-	}, {
-		"path": "pages/my/index",
-		"style": {
-			"navigationStyle": "custom"
-			// "disableScroll": true
-		}
-	}],
-	"tabBar": {
-		"custom": false,
-		"color": "#7A7E83",
-		"selectedColor": "#6BD0FF",
-		"borderStyle": "white",
-		"backgroundColor": "#ffffff",
-		"list": [{
-				"pagePath": "pages/hall/index"
-			},
-			{
-				"pagePath": "pages/sites/index"
-			},
-			{
-				"pagePath": "pages/reserve/index"
-			},
-			{
-				"pagePath": "pages/my/index"
-			}
-		]
-	},
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-//		"navigationBarTitleText": "健身中心",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
-
+  "easycom": {
+    "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
+    "^l-(.*)": "@/l-components/l-$1/index.vue",
+    "autoscan": true,
+    "custom": {
+      "autoscan": true,
+      "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
+      "^l-(.*)": "@/l-components/l-$1/index.vue"
+    }
+  },
+  "preloadRule": {},
+  "subPackages": [
+    {
+      "root": "module1",
+      "pages": [
+        {
+          "path": "pages/detail",
+          "style": {}
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "path": "pages/hall/index",
+      "style": {
+        "navigationStyle": "custom"
+        // "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/hall/all",
+      "style": {
+        "navigationStyle": "custom"
+        // "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/sites/index",
+      "style": {
+        "navigationStyle": "custom"
+        // "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/reserve/index",
+      "style": {
+        "navigationStyle": "custom"
+        // "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "style": {
+        "navigationStyle": "custom"
+        // "disableScroll": true
+      }
+    }
+  ],
+  "tabBar": {
+    "custom": false,
+    "color": "#7A7E83",
+    "selectedColor": "#6BD0FF",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/hall/index"
+      },
+      {
+        "pagePath": "pages/sites/index"
+      },
+      {
+        "pagePath": "pages/reserve/index"
+      },
+      {
+        "pagePath": "pages/my/index"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    //		"navigationBarTitleText": "健身中心",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
 }
