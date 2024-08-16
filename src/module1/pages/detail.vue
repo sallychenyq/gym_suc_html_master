@@ -4,17 +4,21 @@
 			<view class="float-box align-center">
 				<view class="price-info flex-col justify-center">
 					<view class="price-info-box">
-						<text class="text">低至</text>
 						<text class="price">￥</text>
 						<text class="price num">
 							{{ infoList.priceOriginal }}
 						</text>
 					</view>
-					<image
-							class="image"
-							src="/static/imgs/corps/coach-企业折扣@2x.png"/>
+					<view class="box">
+						<text class="text">{课时均价}</text>
+						<image
+								class="thumbnail"
+								src="/static/static/问好.png"/></view>
 				</view>
 				<button @click="popupAppoint" class="appoint-button">购课</button>
+				<button class="button_1" click="changeAdd">
+					<text class="text_1">候选</text>
+				</button>
 			</view>
 		</view>
 		<u-swiper height="450rpx" :list="infoList.personalAlbum" imgMode="aspectFill"></u-swiper>
@@ -28,11 +32,11 @@
 				<image :src="infoList.avatar" class="topAvatar"/>
 				<image
 						v-if="infoList.gender === 1"
-						src="/static/sex-icon/男-icon.png"
+						src="/static/static/男-icon.png"
 						class="gender"></image>
 				<image
 						v-if="infoList.gender === 2"
-						src="/static/sex-icon/女-icon.png"
+						src="/static/static/女-icon.png"
 						class="gender"></image>
 				<view class="name">
 					<view class="text1">
@@ -51,19 +55,19 @@
 					</view>
 					<view class="tags flex-row justify-between">
 						<view class="tag-item flex-col align-center">
-							<image class="item-image" src="/static/detail-icon/年龄.png"/>
+							<image class="item-image" src="/module1/static/年龄.png"/>
 							<text class="item-text">{{ _Birthday() }}</text>
 						</view>
 						<view class="tag-item flex-col align-center">
-							<image class="item-image" src="/static/detail-icon/身高.png"/>
+							<image class="item-image" src="/module1/static/身高.png"/>
 							<text class="item-text">{{ infoList.resume.height }}cm</text>
 						</view>
 						<view class="tag-item flex-col align-center">
-							<image class="item-image" src="/static/detail-icon/学历.png"/>
+							<image class="item-image" src="/module1/static/学历.png"/>
 							<text class="item-text">{{ infoList.resume.education }}</text>
 						</view>
 						<view class="tag-item flex-col align-center">
-							<image class="item-image" src="/static/detail-icon/星座.png"/>
+							<image class="item-image" src="/module1/static/星座.png"/>
 							<text class="item-text">{{ infoList.resume.constellation }}</text>
 						</view>
 					</view>
@@ -73,28 +77,28 @@
 							class="scroll-social">
 						<view class="social">
 							<view class="head">
-								<image class="social-head-image" src="/static/detail-icon/抖音.png"/>
+								<image class="social-head-image" src="/module1/static/抖音.png"/>
 								<text>抖音</text>
 							</view>
 							<text class="value">yfz668888</text>
 						</view>
 						<view class="social">
 							<view class="head">
-								<image class="social-head-image" src="/static/detail-icon/小红书.png"/>
+								<image class="social-head-image" src="/module1/static/小红书.png"/>
 								<text>小红书</text>
 							</view>
 							<text class="value">yfz668888</text>
 						</view>
 						<view class="social">
 							<view class="head">
-								<image class="social-head-image" src="/static/detail-icon/快手.png"/>
+								<image class="social-head-image" src="/module1/static/快手.png"/>
 								<text>快手</text>
 							</view>
 							<text class="value">yfz668888</text>
 						</view>
 						<view class="social">
 							<view class="head">
-								<image class="social-head-image" src="/static/detail-icon/视频号.png"/>
+								<image class="social-head-image" src="/module1/static/视频号.png"/>
 								<text>视频号</text>
 							</view>
 							<text class="value">yfz668888</text>
@@ -299,6 +303,7 @@ export default {
 			return array.slice(1);
 		},
 		certific() {
+			console.log(this.infoList.certificateAlbum)
 			this.$utils.previewImage(this.infoList.certificateAlbum);
 		},
 		popupAppoint() {
@@ -354,20 +359,26 @@ export default {
 				line-height: 50rpx;
 				text-align: left;
 
-				.text {
-					font-size: 24rpx
-				}
-
 				.price {
 					font-weight: bold;
 				}
-
 				.num {
 					font-size: 42rpx;
 					margin: -10rpx 0 15rpx 0
 				}
-			}
 
+			}
+			.box {
+				.text {
+					font-size: 22rpx;
+					color: #9C9CB0;
+				}
+
+				.thumbnail {
+					width: 22rpx;
+					height: 22rpx;
+				}
+			}
 			.image {
 				width: 110rpx;
 				height: 30rpx;
@@ -378,11 +389,30 @@ export default {
 		.appoint-button {
 			color: #ffffff;
 			background: linear-gradient(to left, #6bd0ff, #00d9d9);
-			width: 360rpx;
+			width: 180rpx;
 			height: 96rpx;
-			border-radius: 48rpx;
-			margin-right: 8rpx;
-			line-height: 90rpx;
+			border-radius: 50rpx;
+			margin-right: 20rpx;
+			font-size: 36rpx;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.button_1{
+			height: 96rpx;
+			background: #FFFFFF 100% no-repeat;
+			width: 180rpx;
+			border-radius: 50rpx;
+			border: #DEDEDE solid 1rpx;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.text_1 {
+				color: #060c24;
+				font-size: 36rpx;
+				font-family: Source Han Sans-Regular;
+				font-weight: bolder;
+			}
 		}
 	}
 }
@@ -416,7 +446,7 @@ export default {
 		.topAvatar {
 			position: absolute;
 			margin-top: -20rpx;
-			border: 6rpx solid #ffc98a;
+			border: 4rpx solid #ffffff;
 			border-radius: 50%;
 			width: 140rpx;
 			height: 140rpx;
@@ -436,12 +466,12 @@ export default {
 
 			.text1 {
 				font-size: 42rpx;
-				color: #ffc98a;
+				color: #ffffff;
 			}
 
 			.text2 {
 				font-size: 24rpx;
-				color: #ffc98a;
+				color: #ffffff;
 				margin-top: 30rpx
 			}
 		}
@@ -452,7 +482,6 @@ export default {
 
 		.white {
 			background-color: #FFFFFF;
-
 			.introduce {
 				margin: 30rpx;
 				font-weight: 400;
@@ -492,7 +521,7 @@ export default {
 				margin: 0 0 10rpx 30rpx;
 
 				.social {
-					border: 1rpx solid #ffc98b;
+					border: 1rpx solid #D6F3F9;
 					border-radius: 15rpx;
 					width: max-content;
 					height: 48rpx;
@@ -632,8 +661,8 @@ export default {
 		}
 
 		.skill {
-			border: 2rpx solid #ffc98b;
-			background-color: #ffedd0;
+			border: 2rpx solid #fdebbb;
+			background-color: #fff8df;
 			border-radius: 15rpx;
 			height: 220rpx;
 			width: 730rpx;
@@ -669,20 +698,20 @@ export default {
 
 				.line {
 					height: 60rpx;
-					border-bottom: 1px #ffc98b dashed;
+					border-bottom: 1px #fad374 dashed;
 				}
 			}
 
 			.comma1 {
 				position: absolute;
-				color: #ffc98b;
+				color: #fdebbb;
 				font-size: 80rpx;
 			}
 
 			.comma {
 				position: absolute;
 				font-size: 200rpx;
-				color: #ffc98b;
+				color: #fdebbb;
 				bottom: -110rpx;
 				right: 20rpx;
 			}

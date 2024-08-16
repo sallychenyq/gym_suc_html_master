@@ -8,10 +8,10 @@
 	  <u-gap height="105rpx"></u-gap>
     <view class="tab flex-row">
 	    <view @click="tabChange(0)" class="text">
-		    <text>推荐</text>
+		    <text :class="tabsCurrent===0?'active':'mode-text'">推荐</text>
       </view>
 	    <view @click="tabChange(1)" class="text">
-		    <text>大厅</text>
+		    <text :class="tabsCurrent===1?'active':'mode-text'">大厅</text>
 	    </view>
     </view>
     <view v-show="tabsCurrent === 0">
@@ -22,31 +22,24 @@
         :indicator="false"
         class="section_5">
 	      <swiper-item v-for="(item, index) in coachlist" :key="index">
-          <view>
             <div class="group_2">
               <image class="group_2" :src="item.avatar" mode="aspectFill">
                 <view class="box_8 flex-row">
-                  <view class="group_3 flex-col">
-                    <view class="text-wrapper_2 flex-row">
-                      <text class="text_6">¥</text>
-                      <text class="text_7">1688</text>
-                    </view>
-                    <text class="text_8">{课时均价}</text>
-                  </view>
                   <!-- <u-line class="group_4 flex-col"></u-line> -->
                   <view class="group_5 flex-col">
                     <view class="box_9 flex-row">
-                      <text class="text_9">{{ item.coachNickName }} {网球教练}</text>
+                      <text class="text_9">{{ item.coachNickName }}</text>
                       <image
                         class="label_2"
                         referrerpolicy="no-referrer"
                         :src="item.gender == 1
                             ? '/static/static/男-icon.png'
                             : '/static/static/女-icon.png'"/>
+	                    <text class="text_1">【网球教练】</text>
                     </view>
                     <view class="text-wrapper_3">
-                      <text class="text_10" v-if="item.resume.birthday">
-	                      {{ _Birthday() }}年</text>
+                      <text class="text_10" >
+	                      {{ _Birthday(item) }}</text>
                       <text class="text_10">・</text>
                       <text class="text_10">{{ item.resume.height }}cm</text>
                       <text class="text_10">・</text>
@@ -65,10 +58,11 @@
                       src="/static/static/推荐.png"/>
                   </view>
                   <view class="text-group_2 flex-row">
-                    <u-read-more class="text-group_2 flex-row"><text class="text_17">
-                        这里写一些推荐甄选教练的理由，但是文字不能这么少，还要再写一点才能让页面看着比例协调nsjvdiufnvdifnvijdnvndfvvvvvvvvvvvvvvvvffvakjndfjvndkfjnckjdfvkjfdvkjmd
-                      </text></u-read-more>
-                    <button class="text_18" @click="detail(index)">
+<!--                    <u-read-more class="text-group_2 flex-row">-->
+	                    <text class="text_17">
+	                    这里写一些推荐甄选教练的理由，但是文字不能这么少，还要再写一点才能让页面看着比例协调nsjvdiufnvdifnvijdnvndfvvvvvvvvvvvvvvvvffvakjndfjvndkfjnckjdfvkjfdvkjmd
+                      </text>
+                    <button class="text_18" @click="detail(item.coachId)">
                       查看更多
                     </button>
                   </view>
@@ -91,20 +85,24 @@
                 </view>
               </image>
             </div>
-          </view>
 	      </swiper-item>
       </swiper>
       <view class="section_6 justify-between">
-	      <view class="price flex-col"></view>
-	      <view class="bottomSection">
-        <view class="group_6 flex-row justify-between">
-          <button class="text-wrapper_4 flex-col" click="changeAdd">
+	      <view class="group_3 flex-col">
+		      <view class="text-wrapper_2 flex-row">
+			      <text class="text_6">¥</text>
+			      <text class="text_7" v-for="(item,index) in coachlist" :key="index">{{item.priceOriginal}}</text>
+		      </view>
+		      <text class="text_8">{课时均价}</text>
+	      </view>
+        <view class="group_6 flex-row">
+          <button class="text-wrapper_4" click="changeAdd">
             <text class="text_19">候选</text>
           </button>
-          <button class="text-wrapper_5 flex-col">
+          <button class="text-wrapper_5">
             <text class="text_20">购课</text>
           </button>
-        </view></view>
+        </view>
       </view>
     </view>
     <view v-show="tabsCurrent === 1"> <hall ref="all"></hall> </view>
@@ -164,17 +162,17 @@ export default {
 		  })
 	  },
     detail(index) {
-      uni.navigateTo({ url: "/pages/hall/detail?index=" + index });
+      uni.navigateTo({ url: "/pages/hall/detail?id=" + index });
     },
-	  _Birthday() {
-		  if (!this.infoList.resume) {
+	  _Birthday(item) {
+		  if (!item.resume) {
 			  return null;
 		  }
-		  if (!this.infoList.resume.birthday) {
+		  if (!item.resume.birthday) {
 			  return null;
 		  }
 		  // 1999-01-01,拆分99年
-		  let year = this.infoList.resume.birthday.split("-")[0].slice(2);
+		  let year = item.resume.birthday.split("-")[0].slice(2);
 		  return year + "年";
 	  },
   },

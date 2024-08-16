@@ -1,22 +1,29 @@
 	.tab{
 		flex-direction: row;
+		margin-bottom: 20rpx;
 		.text{
 			margin-left: 20rpx;
+			.mode-text{
+				color: #9C9CB0 ;
+				font-size: 28rpx;
+			}
+			.active{
+				color: #060C24;
+				font-size: 36rpx;
+				font-weight: bold;
+			}
 		}
 	}
 	.section_5 {
-		height: 1200rpx;
+		height: 1190rpx;
 		/*1220*/
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-
-		width: 690rpx;
-		margin: 0 0 0 30rpx;
-		border: 3rpx solid #ffffff;
-		box-shadow: 6rpx 0rpx 16rpx #002024;
+		background: linear-gradient(180deg,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46),rgba(0, 0, 0, 0.66));
+		width: 730rpx;
+		margin-left: 10rpx;
 		border-radius: 15px;
 		.group_2 {
-			width: 690rpx;
-			height: 1200rpx;
+			width: 100%;
+			height: 100%;
 			//background-image: url("item");
 			background-position: center;
 			background-size: auto 100%;
@@ -28,61 +35,9 @@
 			.box_8 {
 				width: 600rpx;
 				height: 78rpx;
-				margin: 768rpx 0 0 30rpx;
+				margin-top: 768rpx;
 				position: absolute;
 				bottom: 370rpx;
-				.group_3 {
-					width: 150rpx;
-					height: 75rpx;
-					margin-top: 3rpx;
-					.text-wrapper_2 {
-						width: 135rpx;
-						height: 37rpx;
-						margin-left: 1rpx;
-						.text_6 {
-							width: 15rpx;
-							height: 33rpx;
-							overflow-wrap: break-word;
-							color: rgba(255, 255, 255, 1);
-							font-size: 32rpx;
-							font-family: D-DIN bold;
-							/* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-							font-weight: normal;
-							text-align: center;
-							white-space: nowrap;
-							line-height: 32rpx;
-							margin-top: 4rpx;
-						}
-						.text_7 {
-							width: 92rpx;
-							height: 32rpx;
-							overflow-wrap: break-word;
-							color: rgba(255, 255, 255, 1);
-							font-size: 48rpx;
-							/* font-family: 'Gill Sans MT', 'Trebuchet MS'; */
-							font-family: D-DIN;
-							font-weight: 700;
-							text-align: center;
-							white-space: nowrap;
-							line-height: 32rpx;
-							margin: 0 0 0 10rpx;
-						}
-					}
-					.text_8 {
-						width: 116rpx;
-						height: 34rpx;
-						overflow-wrap: break-word;
-						color: rgba(255, 255, 255, 1);
-						font-size: 24rpx;
-						letter-spacing: 3px;
-						font-family: Source Han Sans-Regular;
-						font-weight: normal;
-						text-align: center;
-						white-space: nowrap;
-						line-height: 34rpx;
-						margin-top: 4rpx;
-					}
-				}
 				.group_4 {
 					width: 1rpx;
 					height: 70rpx;
@@ -91,18 +46,16 @@
 					background-color: rgba(255, 255, 255, 1);
 				}
 				.group_5 {
-					width: 306rpx;
 					height: 78rpx;
 					margin-left: 30rpx;
 					.box_9 {
-						width: 350rpx;
 						height: 35rpx;
 						.text_9 {
-							width: 235rpx;
+							width: max-content;
 							height: 34rpx;
 							overflow-wrap: break-word;
 							color: rgba(255, 255, 255, 1);
-							font-size: 32rpx;
+							font-size: 42rpx;
 							letter-spacing: 2px;
 							font-family: Source Han Sans-Bold;
 							font-weight: 700;
@@ -113,7 +66,13 @@
 						.label_2 {
 							width: 30rpx;
 							height: 30rpx;
-							margin: 5rpx 0 0 50rpx;
+							margin-top: 5rpx;
+						}
+						.text_1{
+							font-family: AliPHT3-55Regular;
+							font-weight: 500;
+							font-size: 42rpx;
+							color: #FFFFFF;
 						}
 					}
 					.text-wrapper_3 {
@@ -126,7 +85,7 @@
 						text-align: left;
 						white-space: nowrap;
 						line-height: 34rpx;
-						margin-top: 9rpx;
+						margin-top: 10rpx;
 						.text_10 {
 							width: 306rpx;
 							height: 34rpx;
@@ -145,38 +104,31 @@
 			.image-text_1 {
 				width: 606rpx;
 				height: 123rpx;
-				margin: 855rpx 0 0 30rpx;
+				margin: 897rpx 0 0 30rpx;
 				position: absolute;
 				bottom: 230rpx;
 				.block_1 {
 					position: relative;
-					width: 132rpx;
-					height: 38rpx;
+					width: 142rpx;
+					height: 46rpx;
 					align-items: center;
 					justify-content: center;
-					background: linear-gradient(rgba(0, 217, 217, 0.5), rgba(107, 208, 255, 0.5));
-					/* opacity: 0.4; */
-					border-radius: 10rpx;
-
+					background: linear-gradient(315deg, #00D9D9 0%, #6BD0FF 100%);
+					background-size: cover;
+					//opacity: 0.4;
+					border-radius: 6rpx;
 						.text-group_1 {
-							width: 96rpx;
-							height: 28rpx;
-							overflow-wrap: break-word;
 							color: rgba(255, 255, 255, 1);
 							font-size: 24rpx;
 							font-family: Source Han Sans-Medium;
 							font-weight: 500;
 							text-align: left;
-							white-space: nowrap;
-							line-height: 28rpx;
 						}
 						.thumbnail_1 {
 							width: 17rpx;
 							height: 17rpx;
 							margin-top: 7rpx;
 						}
-
-
 				}
 				.text-group_2 {
 					width: 666rpx;
@@ -187,9 +139,8 @@
 					font-weight: normal;
 					text-align: justify;
 					line-height: 36rpx;
-					margin-top: 11rpx;
+					margin-top: 15rpx;
 					.text_17 {
-						width: 606rpx;
 						height: 72rpx;
 						overflow-wrap: break-word;
 						color: rgba(255, 255, 255, 1);
@@ -209,13 +160,12 @@
 						width: 50rpx;
 						height: 70rpx;
 						overflow-wrap: break-word;
-						color: rgba(54, 214, 237, 1);
+						color: #38d8ec;
 						font-size: 22rpx;
 						font-family: Source Han Sans-Regular;
 						font-weight: normal;
 						text-align: justify;
 						line-height: 36rpx;
-
 						margin: 35rpx 0 0 0;
 					}
 				}
@@ -236,59 +186,98 @@
 						height: 170rpx;
 						margin-right: 20rpx;
 						border: 2rpx solid #ffffff;
-						border-radius: 25rpx;
+						border-radius: 20rpx;
 					}
 				}
 			}
 		}
 	}
 	.section_6 {
-		width: 750rpx;
-		height: 137rpx;
-		.group_6 {
-			width: 360rpx;
-			height: 96rpx;
-			margin: 30rpx 0 0 30rpx;
-			.text-wrapper_4 {
-				height: 96rpx;
-				background: #FFFFFF 100% no-repeat;
-				background-size: 100% 100%;
-				width: 180rpx;
-				border-radius: 25px;
-				border: #DEDEDE solid 1rpx;
-				.text_19 {
-					width: 112rpx;
-					height: 28rpx;
+		height: 125rpx;
+		align-items: center;
+		margin: 0 20rpx 0 20rpx;
+		.group_3 {
+			width: 150rpx;
+			height: 75rpx;
+			margin-top: 3rpx;
+			.text-wrapper_2 {
+				width: 135rpx;
+				height: 37rpx;
+				margin-left: 1rpx;
+				.text_6 {
+					width: 15rpx;
+					height: 33rpx;
 					overflow-wrap: break-word;
-					color: rgba(68, 68, 68, 1);
-					font-size: 28rpx;
-					font-family: Source Han Sans-Regular;
-					font-weight: normal;
-					text-align: left;
+					color: #060C24;
+					font-size: 48rpx;
+					font-family: D-DIN bold;
+					text-align: center;
 					white-space: nowrap;
-					line-height: 28rpx;
-					margin: 34rpx 0 0 109rpx;
+					line-height: 32rpx;
+					margin-top: 4rpx;
+				}
+				.text_7 {
+					width: 92rpx;
+					height: 32rpx;
+					overflow-wrap: break-word;
+					color: #060C24;
+					font-size: 48rpx;
+					/* font-family: 'Gill Sans MT', 'Trebuchet MS'; */
+					font-family: D-DIN;
+					font-weight: 900;
+					text-align: center;
+					white-space: nowrap;
+					line-height: 32rpx;
+					margin: 0 0 0 10rpx;
 				}
 			}
-			.text-wrapper_5 {
-				height: 96rpx;
-				background: linear-gradient(to left, #6bd0ff, #00d9d9) 100% no-repeat;
-				background-size: 100% 100%;
-				width: 180rpx;
-				border-radius: 25px;
-				.text_20 {
-					width: 112rpx;
-					height: 28rpx;
-					overflow-wrap: break-word;
-					color: rgba(255, 255, 255, 1);
-					font-size: 28rpx;
-					font-family: Source Han Sans-Regular;
-					font-weight: normal;
-					text-align: left;
-					white-space: nowrap;
-					line-height: 28rpx;
-					margin: 34rpx 0 0 109rpx;
-				}
+			.text_8 {
+				width: 116rpx;
+				height: 34rpx;
+				overflow-wrap: break-word;
+				color: #9C9CB0;
+				font-size: 26rpx;
+				letter-spacing: 3px;
+				font-family: Source Han Sans-Regular;
+				text-align: center;
+				white-space: nowrap;
+				line-height: 34rpx;
+				margin-top: 4rpx;
+			}
+		}
+
+	}
+	.group_6 {
+		width: 360rpx;
+		height: 96rpx;
+		.text-wrapper_4 {
+			height: 96rpx;
+			background: #FFFFFF 100% no-repeat;
+			width: 180rpx;
+			border-radius: 35px;
+			border: #DEDEDE solid 1rpx;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.text_19 {
+				color: rgba(68, 68, 68, 1);
+				font-size: 36rpx;
+				font-family: Source Han Sans-Regular;
+				font-weight: bolder;
+			}
+		}
+		.text-wrapper_5 {
+			height: 96rpx;
+			background: linear-gradient(to left, #6bd0ff, #00d9d9) 100% no-repeat;
+			width: 180rpx;
+			border-radius: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.text_20 {
+				color: rgba(255, 255, 255, 1);
+				font-size: 36rpx;
+				font-family: Source Han Sans-Regular;
 			}
 		}
 	}

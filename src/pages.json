@@ -16,7 +16,9 @@
       "pages": [
         {
           "path": "pages/detail",
-          "style": {}
+          "style": {
+            "navigationStyle": "custom"
+          }
         }
       ]
     }
